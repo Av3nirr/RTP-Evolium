@@ -59,17 +59,6 @@ public class RTPCommand implements CommandExecutor {
                         cooldownTimer.runTaskTimer(main , 0 , 20);
                         return true;
                     }
-                        //Ajout du joueur dans la HashMap
-
-                        int seconds = Math.toIntExact(System.currentTimeMillis() / 1000);
-
-                        main.getCooldownCMD().put(player , seconds + 1800); // 1800 secondes car 30 minutes = 1800 secondes
-
-                        //Cooldown et puis Téléportation
-                        CooldownTimer cooldownTimer = new CooldownTimer(x , y , z,player,main);
-                        cooldownTimer.runTaskTimer(main , 0 , 20);
-
-                        return true;
                 }
                     //Vérification si cooldown passé
                     int millis = Math.toIntExact(System.currentTimeMillis() / 1000);
